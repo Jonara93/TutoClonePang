@@ -1,0 +1,57 @@
+# =============== #
+# Unity Generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild*/
+[Ll]ogs/
+MemoryCaptures/
+.crash/
+
+# Do not ignore Assets/ or ProjectSettings/
+# They contain your actual game data and config
+
+# =============== #
+# IDE / Editors   #
+# =============== #
+
+# VS Code
+.vscode/
+.history/
+
+# Rider / JetBrains
+.idea/
+
+# Visual Studio
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# =============== #
+# Unity Collaborate #
+# =============== #
+.collab/
+
+# =============== #
+# OS Files        #
+# =============== #
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============== #
+# Unity Packages  #
+# =============== #
+*.unitypackage
+
+# =============== #
+# Other cache     #
+# =============== #
+*.bak
+*.backup
+*.orig
+*.tmp
