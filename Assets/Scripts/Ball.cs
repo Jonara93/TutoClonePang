@@ -57,7 +57,7 @@ public class Ball : MonoBehaviour
         gameObject.layer = ballLayer;
     }
 
-    private void Initialize(int ballSize, Color ballColor)
+    public void Initialize(int ballSize, Color ballColor)
     {
         size = ballSize;
 
@@ -103,7 +103,7 @@ public class Ball : MonoBehaviour
         rb.linearVelocity = new Vector2(directionX * currentSpeed, initialVerticalVelocity);
     }
 
-    private void Split()
+    public void Split()
     {
         if (size > 1)
         {
@@ -111,11 +111,11 @@ public class Ball : MonoBehaviour
 
             //ajout score
             int points = basePoints * (5 - size);
-            // GameManager.Instance.AddScore(points);
+            GameManager.Instance.AddScore(points);
         }
         else
         {
-            // GameManager.Instance.AddScore(basePoints * 4);
+            GameManager.Instance.AddScore(basePoints * 4);
         }
 
         Destroy(gameObject);
@@ -133,9 +133,8 @@ public class Ball : MonoBehaviour
             Vector3 spawnPosition = transform.position;
             spawnPosition.x += (i == 0) ? -0.2f : 0.2f;
 
-            GameObject newBall = new GameObject("Ball");//TODO SUPPRIMER
             // utiliser le game manager pour créer une nouvelle balle
-            // GameObject newBall = GameManager.Instance.SpawnBall(size - 1, spawnPosition);
+            GameObject newBall = GameManager.Instance.SpawnBall(size - 1, spawnPosition);
 
             // récupérer le composant ballde la nouvelle balle
             Ball ballComponent = newBall.GetComponent<Ball>();

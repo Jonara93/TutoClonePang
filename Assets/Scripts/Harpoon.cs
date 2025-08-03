@@ -41,11 +41,11 @@ public class Harpoon : MonoBehaviour
     {
         if (collision.CompareTag("Ball"))
         {
-            // Ball ball = collision.GetComponent<Ball>();
-            // if (ball != null)
-            // {
-            //     ball.Split();
-            // }
+            Ball ball = collision.GetComponent<Ball>();
+            if (ball != null)
+            {
+                ball.Split();
+            }
 
             Destroy(gameObject);
         }

@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        // if (!GameManager.Instance.IsRunning()) { return; }
+        if (!GameManager.Instance.IsRunning()) { return; }
         HandleInput();
 
         if (isInvulnerable) { HandleInvulnerability(); }
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // if (!GameManager.Instance.IsRunning()) { return; }
+        if (!GameManager.Instance.IsRunning()) { return; }
 
         // Move the player
         Vector2 targetVelocity = new Vector2(moveDirection.x * moveSpeed, 0);
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
         if (isInvulnerable) return;
 
         //Notify GameManager
-        // GameManager.Instance.PlayerHit();
+        GameManager.Instance.PlayerHit();
 
         // Start invulnerability
         InitializeInvulnerability();
